@@ -371,6 +371,7 @@ section h2::after {
 .orgs-grid .pop-up:nth-child(4) { transition-delay: 0.16s; }
 
 .achievements-grid .pop-up:nth-child(5) { transition-delay: 0.20s; }
+.achievements-grid .pop-up:nth-child(6) { transition-delay: 0.24s; }
 
 /* ---------- Hero / About Me Section ---------- */
 #hero {
@@ -631,6 +632,7 @@ body.light-mode #hero h1 {
 .kadayawan { background-image: url("images/a99d2db1-204e-4847-8c48-8ff7f7c060b6.jpg"); }
 .dspc { background-image: url("images/d2e7c020-342c-454d-94bb-ef472a269a90.jpg"); }
 .gdgoc-cert { background-image: url("images/79dabeee-1080-46cc-816b-0a06eadd9829.jpg"); }
+.new-achievement { background-image: url("images/rank\ 1\ dspc\ news\ writer.jpg"); }
 
 /* Organizations Grid */
 .orgs-grid {
