@@ -12,6 +12,34 @@ if (themeBtn) {
   });
 }
 
+// Mobile Hamburger Navigation Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+if (mobileMenuBtn && navLinks) {
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isExpanded = navLinks.classList.toggle('active');
+    mobileMenuBtn.setAttribute('aria-expanded', String(isExpanded));
+  });
+
+  // Close mobile navigation menu on link click
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close mobile menu when clicking outside header
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+      navLinks.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 // Interactive Contact Button
 const contactBtn = document.getElementById('contact-btn');
 if (contactBtn) {
